@@ -16,16 +16,24 @@
   <!-- navbar -->
 
   <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Mr January</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#aboutme">About me</a></li>
-        <li><a href="#policy">My policy</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <div class="nav-wrapper black darken-4">
+      <a href="#!" class="brand-logo">Mr January</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down ">
+        <li><a class="btn brown tooltipped" data-position="top" data-tooltip="Home" href="#home">Home</a></li>
+        <li><a class="btn brown tooltipped" data-position="down" data-tooltip="About" href="#aboutme">About</a></li>
+        <li><a class="btn brown tooltipped" data-position="top" data-tooltip="My policies" href="#policy">My policies</a></li>
+        <li><a class="btn brown tooltipped" data-position="down" data-tooltip="contact" href="#contac">contact</a></li>
         
-      </ul>
+    
+      
     </div>
+    <ul class="sidenav brown "  id="mobile-demo">
+      <li><a class="white-text" href="#home">Home</a></li>
+      <li><a class="white-text"  href="#about">About</a></li>
+      <li><a class="white-text"  href="#policy">My policies</a></li>
+      <li><a class="white-text"  href="#contact">Contact</a></li>
+    </ul>
   </nav>
 <!--home section-->
 <section id="home" class="mb-3">
@@ -59,6 +67,8 @@
 
 
 
+<!-- about section-->
+
 <section id="aboutme" class="  mt-3 mb-4">
     <div class="download_area">
       <div class="container">
@@ -76,7 +86,7 @@
                       <p>Proin laoreet elementum ligula, ac tincidunt lorem accumsan nec. Fusce eget urna ante. Donec massa velit, varius a accumsan ac, tempor iaculis massa. Sed placerat justo sed libero varius vulputate. Ut a mi tempus massa malesuada fermentum.
                       </p>
                       <p>Sed eleifend sed nibh nec fringilla. Donec eu cursus sem, vitae tristique ante. Cras pretium rutrum egestas. Integer ultrices libero sed justo vehicula, eget </p>
-                      <a class="waves-effect waves-light btn-small" href="{% url 'about_return'  %} ">Dowbload CV</a>
+                      <a class="waves-effect waves-light btn-small" href="#aboutme">Dowbload CV</a>
                   </div>
               </div>
               <div class="col-lg-5 offset-lg-1 col-md-6 ">
@@ -128,6 +138,8 @@
 
 
 
+<!-- policy section-->
+
 
  <section id="policy" >
     <div class="container">
@@ -169,7 +181,11 @@
               </div>
     </section>
 
+<!-- end of policy section-->
 
+
+
+<!-- contact section-->
 
   <section id="contact" class="container  ">
     <h3>contact me</h3>
@@ -219,6 +235,8 @@
   </section>
 
  
+<!-- end of contact section-->
+
 
 
                      <!-- footer start -->
@@ -238,27 +256,28 @@
                             <div class="row">
                               <div class="input-field col s12">
                                 <i class="material-icons prefix">phone</i>
-                                <input id="icon_telephone" type="tel" class="validate blue-text" disabled value="+255685230096 -airtel ">
-                                <input id="icon_telephone" type="tel" class="validate blue-text" disabled value="+255764977815 -vodacom ">
+                                <input id="icon_telephone" type="tel" class="validate blue-text" disabled value="+255679885513 -Tigo">
+                                <input id="icon_telephone" type="tel" class="validate blue-text" disabled value="+255754813914 -vodacom ">
                                 <label class="red-text" for="icon_telephone">Telephone</label>
                               </div>
                             </div>
                 
                 
                 
-                
-                            <div class="fixed-action-btn">
-                              <a class="btn-floating btn-large red">
-                                <i class="large material-icons">mode_edit</i>
-                              </a>
-                              <h5 class="red-text push-l6">Text me here</h5> 
-                              <ul>
-                                <li><a class="btn-floating red" href="https://www.instagram.com/hassan_yange/" ><i class="fa fa-instagram"></i></a></li>
-                                <li><a class="btn-floating blue darken-1" href="https://www.facebook.com/hassan.yange.5" ><i class="fa fa-facebook"></i></a></li>
-                                <li><a class="btn-floating green" href="" ><i class="fa fa-telegram"></i></a></li>
-                                <li><a class="btn-floating blue" href="" ><i class="fa fa-twitter"></i></a></li>
-                              </ul>
-                            </div>  
+
+            <div class="fixed-action-btn">
+              <a class="btn-floating btn-large red">
+                <i class="large material-icons">mode_edit</i>
+              </a>
+              <h5 class="red-text push-l6">Text me here</h5> 
+              <ul>
+                <li><a class="btn-floating red" href="https://www.instagram.com/hassan_yange/" ><i class="fa fa-instagram"></i></a></li>
+                <li><a class="btn-floating blue darken-1" href="https://www.facebook.com/hassan.yange.5" ><i class="fa fa-facebook"></i></a></li>
+                <li><a class="btn-floating green" href="" ><i class="fa fa-telegram"></i></a></li>
+                <li><a class="btn-floating blue" href="" ><i class="fa fa-twitter"></i></a></li>
+              </ul>
+            </div>  
+
                 
                 
                 
@@ -289,7 +308,7 @@
       $('.slider').slider();
       $(".sidenav").sidenav();
       $('.fixed-action-btn').floatingActionButton();
-      
+      $('.tooltipped').tooltip();
 
     });
   </script>
