@@ -322,6 +322,44 @@
                     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                     <!--JavaScript at end of body for optimized loading-->
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+
+                    <script>
+                      document.addEventListener("DOMContentLoaded", function (event) {
+                         navActivePage();
+                      });
+                    </script>
+                    
+                    <script type="text/javascript" src="main.js"></script>
+                    </body>
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script>
+                        function sendEmail(){
+                          var email = document.getElementById('email').value;
+                          var name = document.getElementById('name').value;
+                          var phone = document.getElementById('phone').value;
+                          var subject = document.getElementById('subject').value;
+                          var message = document.getElementById('message').value;
+                          var body = "Name: " + name + "<br/> Email: " + email + "<br/> Phone Number: " + phone + "<br/> Subject: " + subject + "<br/> Message: " + message;
+                          Email.send({
+                          Host : "smtp.gmail.com",
+                          Username : "hassanyange@gmail.com",
+                          Password : "20000hky",
+                          To : 'hassanyange@gmail.com',
+                          From : email,
+                          Subject : subject,
+                          Body : body
+                          }).then(
+                            message => alert(message)
+                          );
+                        }
+                    </script>
+
+
+
+
                    
                     <script>
                      $(document).ready(function(){
@@ -332,5 +370,12 @@
                        $('.tooltipped').tooltip();
                      });
                     </script>
+
+
+
+
+
+
+
 </body>
 </html>
